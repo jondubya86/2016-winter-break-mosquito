@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "jondubya",
+    "password": null,
+    "database": "zika-attack",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "jondubya",
+    "password": null,
+    "database": "zika-attack",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "jondubya",
+    "password": null,
+    "database": "zika-attack",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

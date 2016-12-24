@@ -1,12 +1,24 @@
 const express = require('express');
 const app = express();
-// var bodyparser = require('body-parser');
-var path = require('path');
+const path = require('path');
+// const Sequelize = require('sequelize');
+// const sequelizeConnection = require('./db');
+const bodyParser = require('body-parser');
+const db = require('./models')
 
-app.use(express.static(__dirname))
+const router = require('./routes');
+const highscore = require('./routes/highscore-router.js')
 
-app.get('/*', function(req, res) {
+app.use(express.static(path.join(__dirname, '/bundle')))
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(highscore);
+
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/index.html'))
 });
 
-app.listen(3890,()=>console.log('listening to port 3890'))
+db.sequelize.sync().then(()=>
+		app.listen(3890,() => {console.log('listening to port 3890')}
+		)
+	);
