@@ -1,8 +1,9 @@
 const HighScore =require('../models/highscore');
-const express = require('express');
-const router = express.Router();
+var router = require('express').Router()
+var db = require('../models')
 
 router.route('/api/highscore')
+
 const getAllHighscore=(req,res)=>{
 	HighScore.findAll().then((data)=>{
 	console.log('worked')
@@ -17,7 +18,5 @@ const postNewHighScore=(req,res)=>{
 	}).then(()=>res.send('New high score!')
 )};
 
-router.route('/')
-.get(getAllHighscore)
 
 module.exports = router;
