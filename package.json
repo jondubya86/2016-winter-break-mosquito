@@ -36,5 +36,8 @@
     "terraformer": "^1.0.7",
     "webpack": "^1.14.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "transform-loader": "^0.2.3"
+  }
 }
