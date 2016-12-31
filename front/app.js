@@ -1,10 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, Link, browserHistory} from 'react-router';
+import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
 
 //components
-import NavBar from './components/NavBar'
-import Home from './components/Home'
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import CanvasComponent from './components/Canvas';
 
 const App = React.createClass({
 	render(){
@@ -20,7 +21,8 @@ const App = React.createClass({
 render((
 	<Router history={browserHistory}>
     	<Route path="/" component={App}>
-    	 	<Route component={Home}/>
+    	 	<IndexRoute component={Home}/>
+    	 	<Route path ="game" component={CanvasComponent}/>
    
     	</Route>
   	</Router>),
