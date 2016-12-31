@@ -4,7 +4,7 @@ import {Layer, Stage, Image} from 'react-konva';
 var Mosquito = React.createClass({
     getInitialState() {
       return {
-        image: null, score: 0, time: 30
+        image: null, score: 0
       };
       this.handleClick = this.handleClick.bind(this);
     },
@@ -19,7 +19,7 @@ var Mosquito = React.createClass({
       image.onload = () => {
         this.setState({
           image: image
-        });
+        })
       }
     },
     render() {

@@ -6,6 +6,7 @@ import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import CanvasComponent from './components/Canvas';
+import TopScore from './components/TopScore';
 
 const App = React.createClass({
 	render(){
@@ -22,8 +23,8 @@ render((
 	<Router history={browserHistory}>
     	<Route path="/" component={App}>
     	 	<IndexRoute component={Home}/>
-    	 	<Route path ="game" component={CanvasComponent}/>
-   
+    	 	<Route path="game" component={CanvasComponent}/>
+    	 	<Route path="score" component={TopScore}/>
     	</Route>
   	</Router>),
 	document.getElementById('root'))
