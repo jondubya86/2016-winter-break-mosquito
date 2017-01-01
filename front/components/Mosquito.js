@@ -7,7 +7,6 @@ var Mosquito = React.createClass({
       return {
         image: null, score: 0
       };
-      this.handleClick = this.handleClick.bind(this);
     },
     handleClick() {
       this.setState({
@@ -24,18 +23,16 @@ var Mosquito = React.createClass({
       }
     },
     render() {
-      console.log(this.state.score)
-      // <KillCount count={this.state.score}/>
+      // console.log(this.state.score)
         return (
-            <Image
+            <Image 
               x={Math.ceil(Math.random() * (745 - 1) + 1)} 
               y={Math.ceil(Math.random() * (545 - 1) + 1)} 
               width={50} 
               height={50}
               shadowBlur={15}
               image={this.state.image}
-              onClick={this.handleClick}
-            />
+              onClick={this.handleClick} />
         );
     }
 })
