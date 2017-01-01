@@ -1,26 +1,47 @@
 import React from 'react';
 import {Layer, Rect, Stage, Group} from 'react-konva';
+import $ from 'jquery';
+
+//components
 import Mosquito from './Mosquito';
+import GameStart from './GameStart';
+import GameOver from './GameOver';
+// import KillCount from './KillCount';
 
 
 var CanvasComponent = React.createClass({
     getInitialState() {
       return {
-        showgame: false
+        showgame: false, gameover: false, buttonshow: true
       };
     },
     startGame() {
-        this.setState({showgame:true})
-        setInterval(()=>this.setState({showgame:false}),30000)
+        this.setState({buttonshow: false, showgame:true,gameover:false})
+        let timer=setInterval(()=>(
+            this.setState({showgame:false, buttonshow: true, gameover:true}),
+            clearInterval(timer))
+            ,30000)
+        timer
     },
+    // upDateScore() {
+    //     $.ajax({
+    //         url: '/api/highscore',
+    //         type: 'POST',
+    //         data: 
+    //     })
+    // },
     render() {
-        console.log(this.state.timer)
         return (
             <div>
+
+            {(this.state.buttonshow===true)?
             <div>
             <button onClick={this.startGame}>Start Game</button> 
-            </div>
-            {(this.state.showgame!=false)?
+            </div>:
+            <div></div>}
+
+            {(this.state.gameover!=true)?
+            (this.state.showgame!=false)?
             <div>
             <Stage width={800} height={600}>
                 <Layer>
@@ -28,7 +49,9 @@ var CanvasComponent = React.createClass({
                 </Layer>
             </Stage>
             </div>:
-            <h1>Waiting for player to start game...</h1>}
+            <GameStart/>:
+            (alert('game over!'),
+            <GameStart/>)}
             </div>
         );
     }
