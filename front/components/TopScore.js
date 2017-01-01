@@ -8,7 +8,7 @@ const TopScore = React.createClass({
 	componentDidMount(){
 		$.ajax({
 			url: '/api/highscore',
-			type: 'GET',
+			type: 'GET'
 		}).done((data)=>
 		this.setState({topscore: data}))
 	},

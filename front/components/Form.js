@@ -1,16 +1,45 @@
 import React from 'react';
+import $ from 'jquery';
 
-function Form() {
-    return (
-    	<div>
-    	<h1>New High Score!</h1>
-      	<form>
-		<input type='text' placeholder='Insert Name Here'></input>
-		<br />
-		<input type="submit" value="Submit"></input>
-		</form>
-		</div>
-    );
-}
+const Form = React.createClass({
+	getInitialState() {
+		return {data:null, input: ''}
+	},
+	componentDidMount() {
+		$.ajax({
+			url: '/api/highscore',
+			type: 'GET'
+		}).done((data)=>
+		this.setState({data: data}))
+	},
+	handleChange(event) {
+		this.setState({input: event.target.value})
+	},
+	addTopScore() {
+		$.ajax({
+			url: '/api/highscore',
+			type: 'POST',
+			data: {	name: this.state.input,
+					score: this.props.score
+					}
+		})
+	},
+	render() {
+    	return (
+    		<div>
+    		<h1>New High Score! {this.props.score} mosquitos vanquished!</h1>
+      		<form onSubmit={this.addTopScore}>
+			<input 	type='text' 
+					placeholder='Insert Name Here'
+					onChange={this.handleChange}
+					value={this.state.input}>
+			</input>
+			<br />
+			<input type="submit" value="Submit"></input>
+			</form>
+			</div>
+    	)
+    }
+});
 
 module.exports = Form;

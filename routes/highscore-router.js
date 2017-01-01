@@ -1,9 +1,13 @@
 const router = require('express').Router()
-const db = require('../models')
+const db = require('../models');
 
 const getAllHighscore=(req,res)=>{
-	db.HighScore.findAll()
-	.then((data)=>{
+	db.HighScore.findAll({
+  		order: [
+    		['score', 'DESC']
+    	],
+    	limit: 10
+  }).then((data)=>{
 	console.log('Worked!')
     res.send(data)
   })

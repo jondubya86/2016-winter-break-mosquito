@@ -5,4 +5,5 @@ module.exports = function(sequelize, DataTypes) {
     score: DataTypes.INTEGER
   });
   return HighScore;
+
 };
