@@ -6,10 +6,10 @@ const NavBar = React.createClass({
 		return(
 			<div id='navbar-outer'>
 				<ul id='navbar-ul'>
-				<li><Link to='/'><a>Home</a></Link></li>
-				<li><Link to='/game'><a>New Game</a></Link></li>
-				<li><Link to='/score'><a>Top Scores</a></Link></li>
-				<li><Link to='/about'><a>About</a></Link></li>
+				<li><Link to='/'><span>Home</span></Link></li>
+				<li><Link to='/game'><span>New Game</span></Link></li>
+				<li><Link to='/score'><span>Top Scores</span></Link></li>
+				<li><Link to='/about'><span>About</span></Link></li>
 				</ul>
 			</div>
 		)

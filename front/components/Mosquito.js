@@ -15,7 +15,7 @@ var Mosquito = React.createClass({
     },
     componentDidMount() {
       const image = new window.Image();
-      image.src = 'http://rincondelecturas.com/lecturas/30063-por-que-dan-comezon-los-piquetes-de-mosquito/images/por-que-dan-comezon-los-piquetes-de-mosquito.png';
+      image.src = 'http://i.imgur.com/NDjimYP.png';
       image.onload = () => {
         this.setState({
           image: image
@@ -29,7 +29,7 @@ var Mosquito = React.createClass({
               y={Math.floor(Math.random() * (545 - 1) + 1)} 
               width={50} 
               height={50}
-              shadowBlur={15}
+              shadowBlur={5}
               image={this.state.image}
               onClick={this.handleClick} />
         );
