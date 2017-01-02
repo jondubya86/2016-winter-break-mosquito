@@ -1,10 +1,30 @@
+/*overall body border*/
+body {
+	border: 5px solid black;
+}
+/*home and about page p tags*/
+p {
+	font-family: 'Lemonada', cursive;
+	color: firebrick;
+	font-size: 14px;
+}
+
 /*navbar*/
+#navbar-outer{
+	border: 1px solid black;
+	background: firebrick;
+}
 #navbar-ul {
 	list-style-type: none;
 	display: flex;
 	flex-direction: row; 
 	justify-content: space-around;
-	align-items: stretch;
+}
+
+#navbar-ul li {
+  	text-decoration: none;
+  	display: block;
+  	text-align: center; 
 }
 
 /*topscore component*/
@@ -13,4 +33,31 @@
 	list-style-type: none;
 	display: flex;
 	flex-direction: column;
+}
+
+/*home page*/
+#home {
+	background-color: #dbdbdb;
+}
+#home-title {
+	font-family: Creepster;
+	font-size: 4em;
+	color: firebrick;
+	background: #333333;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#home-title img {
+	height: 12%;
+	width: 12%;
+}
+#home-body p {
+	padding: 0 40px 20px 40px;
+	display: flex;
+   	flex-direction: column;
+   	align-items: center;
+   	justify-content: center;
 }

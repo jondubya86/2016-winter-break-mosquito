@@ -10,7 +10,7 @@ import TopScore from './TopScore';
 
 
 
-var CanvasComponent = React.createClass({
+const CanvasComponent = React.createClass({
     getInitialState() {
       return {
         showgame: false, gameover: false, buttonshow: true, score: null
@@ -25,7 +25,7 @@ var CanvasComponent = React.createClass({
     startGame() {
         this.setState({showgame:true, gameover: false, buttonshow: false, score:0})
         let timer=setInterval(()=>(
-            this.setState({showgame:false, gameover:true}),
+            this.setState({showgame:false, gameover:true, buttonshow: true}),
             clearInterval(timer))
             ,30000)
         timer

@@ -22,13 +22,13 @@ const Form = React.createClass({
 			data: {	name: this.state.input,
 					score: this.props.score
 				}
-		})
+		}).then((data)=>console.log(data,'score added!'))
 	},
 	render() {
     	return (
     		<div>
     		<h1>New High Score! {this.props.score} Mosquitoes Vanquished!</h1>
-      		<form onSubmit={this.addTopScore, this.setState({buttonshow:true})}>
+      		<form onSubmit={this.addTopScore}>
 			<input 	type='text' 
 					placeholder='Insert Name Here'
 					onChange={this.handleChange}
