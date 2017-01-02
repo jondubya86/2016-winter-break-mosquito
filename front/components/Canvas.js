@@ -23,9 +23,9 @@ var CanvasComponent = React.createClass({
         }).done((score)=>this.setState({topscore: score}))
     },
     startGame() {
-        this.setState({buttonshow: false, showgame:true,gameover:false, score:0})
+        this.setState({showgame:true, gameover: false, buttonshow: false, score:0})
         let timer=setInterval(()=>(
-            this.setState({showgame:false, buttonshow: true, gameover:true}),
+            this.setState({showgame:false, gameover:true}),
             clearInterval(timer))
             ,30000)
         timer

@@ -1,0 +1,16 @@
+/*navbar*/
+#navbar-ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+/*topscore component*/
+
+#topscore-ul{
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+}

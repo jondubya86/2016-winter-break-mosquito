@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
+import './components/styles.css';
 
 //components
 import NavBar from './components/NavBar';
