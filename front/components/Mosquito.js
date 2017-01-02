@@ -25,10 +25,10 @@ var Mosquito = React.createClass({
     render() {
         return (
             <Image 
-              x={Math.floor(Math.random() * (745 - 1) + 1)} 
-              y={Math.floor(Math.random() * (545 - 1) + 1)} 
-              width={50} 
-              height={50}
+              x={Math.floor(Math.random() * (1200 - 1) + 1)} 
+              y={Math.floor(Math.random() * (500 - 1) + 1)} 
+              width={60} 
+              height={60}
               shadowBlur={5}
               image={this.state.image}
               onClick={this.handleClick} />

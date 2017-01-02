@@ -7,13 +7,14 @@ import Mosquito from './Mosquito';
 import GameStart from './GameStart';
 import Form from './Form';
 import TopScore from './TopScore';
+import CanvasBg from './CanvasBg';
 
 
 
 const CanvasComponent = React.createClass({
     getInitialState() {
       return {
-        showgame: false, gameover: false, buttonshow: true, score: null
+        showgame: false, gameover: false, buttonshow: true, score: null, timer: 0
       };
     },
     componentDidMount() {
@@ -23,11 +24,11 @@ const CanvasComponent = React.createClass({
         }).done((score)=>this.setState({topscore: score}))
     },
     startGame() {
-        this.setState({showgame:true, gameover: false, buttonshow: false, score:0})
         let timer=setInterval(()=>(
-            this.setState({showgame:false, gameover:true, buttonshow: true}),
-            clearInterval(timer))
-            ,30000)
+                    this.setState({showgame:false, gameover:true, buttonshow: true}),
+                    clearInterval(timer))
+                    ,30000)
+        this.setState({showgame:true, gameover: false, buttonshow: false, score:0, timer:30})
         timer
     },
     countKill() {
@@ -46,19 +47,15 @@ const CanvasComponent = React.createClass({
     },
     render() {
         return (
-            <div>
-
-            {/*new game loads and shows button, if pressed shows current score while game is playing*/
-            (this.state.buttonshow===true)?
-            <div>
-            <button onClick={this.startGame}>Start Game</button> 
-            </div>:
-            <div><h2>{this.state.score}</h2></div>}
+            <div id='canvas'>
 
             {(this.state.gameover!=true)?/*new game*/
             (this.state.showgame!=false)? /*button pressed starts game*/
             <div>
-            <Stage width={800} height={600}>
+            <Stage width={1260} height={570}>
+                <Layer>
+                    <CanvasBg />
+                </Layer>
                 <Layer onClick={this.countKill}>
                     <Mosquito />
                 </Layer>
@@ -67,6 +64,15 @@ const CanvasComponent = React.createClass({
             <GameStart />:
             (this.state.topscore)?
             this.gameOver():'Loading Topscore...'}
+
+            {/*new game loads and shows button, if pressed shows current score while game is playing*/
+            (this.state.buttonshow===true)?
+            <span>
+            <button onClick={this.startGame}>Start Game</button> 
+            </span>:
+            <div id='scoreboard'>
+            <p>Kill Count: {this.state.score}</p>
+            </div>}
             </div>
         );
     }
