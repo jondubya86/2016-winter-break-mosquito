@@ -8,9 +8,7 @@ const Home = React.createClass({
 					<h1>This is Zika Attack!</h1>
 				</div>
 				<div id='home-body'>
-					<p>You are awaken from your slumber and it is your sole duty as a Swat-a-wan to prevent
-					these filthy bloodsuckers from tasting your precious blood. You may not get them all
-					but you shall try and prevail. May you fare better than those Swat-a-wans who have come before you.</p>
+					<p>You are awaken from your slumber and it is your sole duty as a Swat-a-wan to prevent these filthy bloodsuckers from tasting your precious blood. You may not get them all but you shall try and prevail. May you fare better than those Swat-a-wans who have come before you. We have given you a light-swatter to dispose of these parasites.</p>
 					<p>May the reflex be with you.</p>
 				</div>
 			</div>
