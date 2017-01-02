@@ -5,7 +5,6 @@ import $ from 'jquery';
 //components
 import Mosquito from './Mosquito';
 import GameStart from './GameStart';
-// import GameOver from './GameOver';
 import Form from './Form';
 import TopScore from './TopScore';
 
@@ -35,10 +34,10 @@ var CanvasComponent = React.createClass({
         this.setState({score:this.state.score+=1})
     },
     gameOver() {
-    debugger
-    let topTen=this.state.topscore, scores=[], x
-    for(x in topTen){
-        scores.push(topTen[x].score)}
+        let topTen=this.state.topscore, scores=[], x
+        for(x in topTen){
+            scores.push(topTen[x].score)
+        }
         if(this.state.score>scores[scores.length-1]){
             return <Form score={this.state.score} />
         }else{

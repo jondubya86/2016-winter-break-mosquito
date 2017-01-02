@@ -13,7 +13,6 @@ const TopScore = React.createClass({
 		this.setState({topscore: data}))
 	},
 	render(){
-		console.log(this.state.topscore)
 		return(
 			<div id='topscore'>
 			<ul id='topscore-ul'>
