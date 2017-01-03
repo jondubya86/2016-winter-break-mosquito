@@ -43,7 +43,7 @@ const CanvasComponent = React.createClass({
         }
         if(this.state.score>scores[scores.length-1]){
             this.setState({buttonshow:false})
-            return <Form score={this.state.score} />
+            return <div id='form-id'><Form score={this.state.score} /></div>
         }else{
             return <GameStart />
         }

@@ -1,6 +1,6 @@
 /*overall body border*/
 html{
-	height: 665px;
+	height: 667px;
 }
 body {
 	min-height: 100%;
@@ -213,10 +213,10 @@ body {
 
 @-webkit-keyframes move {
     	0% {
-    		margin-bottom: +80px;
+    		margin-bottom: 60px;
     	}
     	100% {
-    		margin-bottom: 0px;
+    		margin-bottom: 5px;
     	}
     }
 
@@ -227,12 +227,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid black;
-	padding-top: 50px;
-	padding-left: 250px;
-	padding-right: 250px;
-	padding-bottom: 50px;
-	line-height: 1.5em;
+	margin: 0px 100px 0 100px;
 }
 
 #about h1{
@@ -242,7 +237,8 @@ body {
 }
 
 #about p{
-	font-size: 18px;
+	font-size: 19px;
+	padding: 10px 100px 10px 100px;
 }
 
 /*gamestart*/
