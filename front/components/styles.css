@@ -141,9 +141,9 @@ body {
     0% { 	color: red;
     		transform:translateY(-3px); }
     50% { 	color: gray; 
-    		transform:translateY(0px)}
+    		transform:translateY(0px); }
     100% { 	color: #D4AF37; 
-    		transform:translateY(-3px);}
+    		transform:translateY(-3px); }
 }
 
 #gif{
@@ -154,9 +154,6 @@ body {
 	border: 3px solid black;
 }
 
-/*#canvas-stage{
-	cursor: url(http://i.imgur.com/iwiAyD0.png), auto;
-};*/
 
 #start-button{
     display: flex;
@@ -204,7 +201,7 @@ body {
 	font-family: 'Bungee Shade';
 	font-size: 2em;
 	color: #D4AF37;
-	text-shadow: -3px 2px 1px #FFDF00;
+	text-shadow: -3px 2px 1px gray;
 	background-color: #DCDCDC;
 	border: 1px solid #dbdbdb;
 }
@@ -239,7 +236,7 @@ body {
     font-size: 1em;
     padding: 10px;
     margin-bottom: 100px;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 /*topscore*/
@@ -300,3 +297,8 @@ body {
 }
 
 /*gamestart*/
+/*cursor*/
+
+#canvas-stage{
+	cursor: url(http://i.imgur.com/iwiAyD0.png), auto;
+};
