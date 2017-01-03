@@ -1,6 +1,5 @@
 import React from 'react';
 import {Layer, Stage, Image} from 'react-konva';
-// import KillCount from './KillCount';
 
 var Mosquito = React.createClass({
     getInitialState() {
@@ -24,7 +23,7 @@ var Mosquito = React.createClass({
     },
     render() {
         return (
-            <Image 
+            <Image id='mosquito'
               x={Math.floor(Math.random() * (1200 - 1) + 1)} 
               y={Math.floor(Math.random() * (500 - 1) + 1)} 
               width={60} 

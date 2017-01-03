@@ -1,7 +1,10 @@
 /*overall body border*/
+html{
+	height: 665px;
+}
 body {
-	height: 97vh;
-	width: 98vw;
+	min-height: 100%;
+	max-height: 100%;
 	border: 5px solid black;
 }
 /*home and about page p tags*/
@@ -31,12 +34,13 @@ body {
 #navbar-ul li span {
 	color: white;
     font-family: bungee shade;
-    font-size: 30px;
-    text-shadow: 1px 2px 3px #000;
+    font-size: 2em;
+    text-shadow: -4px 1px 2px #000;
 }
 
 #navbar-ul li:hover {
-	transition: 110%;
+	transform: scale(1.1);
+	color: white;
 }
 
 /*topscore component*/
@@ -44,7 +48,7 @@ body {
 #topscore-ul{
 	list-style-type: none;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 }
 
 /*home page*/
@@ -53,7 +57,7 @@ body {
 }
 #home-title {
 	font-family: Creepster;
-	text-shadow: 6px 4px 5px #000;
+	text-shadow: 10px 6px 5px #000;
 	font-size: 4em;
 	color: firebrick;
 	background: #333333;
@@ -84,13 +88,13 @@ body {
 	height: 5%;
 	width: 5%;
 	padding-bottom: 165px;
-    animation: animationFrames ease-in-out 6s;
+    animation: animationFrames ease-in-out 6.5s;
   	transform-origin: 50% 50%;
   	filter: drop-shadow(0px 2px 2px black)
 }
 
 #home-body p {
-	padding: 0 60px 10px 60px;
+	padding: 0 60px 18px 60px;
 	display: flex;
    	flex-direction: column;
    	align-items: center;
@@ -100,7 +104,7 @@ body {
    	font-size: 20px;
 }
 
-/*mosquito canvas*/
+/*mosquito canvas and start button*/
 /*Canvas:currentscore*/
 #scoreboard {
     display: flex;
@@ -116,17 +120,129 @@ body {
     font-size: 30px;
 }
 
+/*canvas gamestart*/
+#gamestart-wait{
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Orbitron';
+	padding: 25px;
+	text-shadow: -3px 4px 2px #dbdbdb;
+	font-size: 1em;
+	padding-top: 20px;
+}
+
+#gif{
+	height: 300px;
+	width: 1200px;
+	background: url(https://media.giphy.com/media/PWFNcsN3rXgcw/giphy.gif) no-repeat center center fixed;
+	background-size: cover;
+	border: 3px solid black;
+}
+
+/*#gif:hover{
+	cursor: url(http://i.imgur.com/Ga9NJsZ.png), auto;
+};*/
+
+#start-button{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+	justify-content: center;
+	border: 1px;
+}
+
+#start-button button{
+	padding: 30px;
+	background-color: white;
+	font-family: 'bungee shade';
+    font-size: 30px;
+    color: red;
+	text-shadow: -4px 4px 2px #dbdbdb;
+	box-shadow: -10px 10px 5px #dbdbdb;
+    border-radius: 15px;
+}
+
+#start-button button:hover {
+	transform: translate(0px,-80px);
+	transform: scale(1.1);
+}
+
+#start-button button:active  {
+	transform: translate(0px,-80px);
+	transform: scale(1);
+	font-size: 2em;
+	color: red;
+	-webkit-transition: background-color .5s linear;
+  	transition: background-color .5s linear;
+}
+
+#highscore-form {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+}
+
 /*topscore*/
 #topscore-ul{
 	border: 1px solid black;
 	background-color: #dbdbdb;
 	font-family: 'Orbitron';
-	font-size: 30px;
+	font-size: 25px;
     color: red;
     align-items: center;
+    	height: 500;
+    	border: 1px solid #333;
+
 }
 #topscore-ul li {
-	padding: 5px;
-	margin: 5px;
+ 	text-shadow: -2px -1px 1px grey;
+ 		background: #dbdbdb;
+    	-webkit-animation-name: move;
+    	-webkit-animation-duration: 6s;
+    	-webkit-animation-timing-function: linear;
+    	padding: 10px;
+		margin: 5px;
 }
 
+#topscore-ul li:hover {
+	-webkit-animation-play-state: start;
+}
+
+@-webkit-keyframes move {
+    	0% {
+    		margin-bottom: +80px;
+    	}
+    	100% {
+    		margin-bottom: 0px;
+    	}
+    }
+
+/*About page*/
+#about{
+	font-family: 'playfair display';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	padding-top: 50px;
+	padding-left: 250px;
+	padding-right: 250px;
+	padding-bottom: 50px;
+	line-height: 1.5em;
+}
+
+#about h1{
+	font-weight: bolder;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#about p{
+	font-size: 18px;
+}
+
+/*gamestart*/

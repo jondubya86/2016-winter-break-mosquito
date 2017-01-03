@@ -9,12 +9,14 @@ import Form from './Form';
 import TopScore from './TopScore';
 import CanvasBg from './CanvasBg';
 
-
+//sound effects
+import Buzz from './Buzz';
+import Splat from './Splat';
 
 const CanvasComponent = React.createClass({
     getInitialState() {
       return {
-        showgame: false, gameover: false, buttonshow: true, score: null, timer: 0
+        showgame: false, gameover: false, buttonshow: true, score: null
       };
     },
     componentDidMount() {
@@ -25,10 +27,10 @@ const CanvasComponent = React.createClass({
     },
     startGame() {
         let timer=setInterval(()=>(
-                    this.setState({showgame:false, gameover:true, buttonshow: true}),
-                    clearInterval(timer))
-                    ,30000)
-        this.setState({showgame:true, gameover: false, buttonshow: false, score:0, timer:30})
+            this.setState({showgame:false, gameover:true, buttonshow: true}),
+            clearInterval(timer))
+            ,30000)
+        this.setState({showgame:true, gameover: false, buttonshow: false, score:0})
         timer
     },
     countKill() {
@@ -40,6 +42,7 @@ const CanvasComponent = React.createClass({
             scores.push(topTen[x].score)
         }
         if(this.state.score>scores[scores.length-1]){
+            this.setState({buttonshow:false})
             return <Form score={this.state.score} />
         }else{
             return <GameStart />
@@ -48,15 +51,15 @@ const CanvasComponent = React.createClass({
     render() {
         return (
             <div id='canvas'>
-
             {(this.state.gameover!=true)?/*new game*/
             (this.state.showgame!=false)? /*button pressed starts game*/
-            <div>
-            <Stage width={1260} height={570}>
+            <div id='canvas-stage'>
+            <Buzz />
+            <Stage width={1270} height={680}>
                 <Layer>
                     <CanvasBg />
                 </Layer>
-                <Layer onClick={this.countKill}>
+                <Layer id='layer-id' onClick={this.countKill}>
                     <Mosquito />
                 </Layer>
             </Stage>
@@ -67,9 +70,9 @@ const CanvasComponent = React.createClass({
 
             {/*new game loads and shows button, if pressed shows current score while game is playing*/
             (this.state.buttonshow===true)?
-            <span>
+            <div id='start-button'>
             <button onClick={this.startGame}>Start Game</button> 
-            </span>:
+            </div>:
             <div id='scoreboard'>
             <p>Kill Count: {this.state.score}</p>
             </div>}

@@ -19,7 +19,7 @@ const TopScore = React.createClass({
 			{(this.state.topscore)?
 				this.state.topscore.map((a,idx)=>
 					<li key={idx}>
-					{a.name} {a.score} points!
+					#{idx+1} {a.name} {a.score} points!
 					</li>):
 					<h1>Loading...</h1>}
 			</ul>
