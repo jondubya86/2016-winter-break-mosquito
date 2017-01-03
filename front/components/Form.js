@@ -13,8 +13,6 @@ const Form = React.createClass({
 		this.setState({data: data}))
 	},
 	handleChange(event) {
-		let name = event.target.value
-		name = name.toUpperCase()
 		this.setState({input: name})
 	},
 	addTopScore() {
