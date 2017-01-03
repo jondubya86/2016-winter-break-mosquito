@@ -51,22 +51,23 @@ const CanvasComponent = React.createClass({
     render() {
         return (
             <div id='canvas'>
-            {(this.state.gameover!=true)?/*new game*/
-            (this.state.showgame!=false)? /*button pressed starts game*/
-            <div id='canvas-stage'>
-            <Buzz />
-            <Stage width={1270} height={680}>
-                <Layer>
-                    <CanvasBg />
-                </Layer>
-                <Layer id='layer-id' onClick={this.countKill}>
-                    <Mosquito />
-                </Layer>
-            </Stage>
-            </div>:
-            <GameStart />:
-            (this.state.topscore)?
-            this.gameOver():'Loading Topscore...'}
+            {
+            (this.state.gameover!=true)?/*new game*/
+                (this.state.showgame!=false)? /*button pressed starts game*/
+                    <div id='canvas-stage'>
+                        <Buzz />
+                        <Stage width={1270} height={680}>
+                            <Layer>
+                                <CanvasBg />
+                            </Layer>
+                            <Layer id='layer-id' onClick={this.countKill}>
+                                <Mosquito />
+                            </Layer>
+                        </Stage>
+                    </div>:
+                <GameStart />:
+            this.gameOver()
+            }
 
             {/*new game loads and shows button, if pressed shows current score while game is playing*/
             (this.state.buttonshow===true)?

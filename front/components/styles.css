@@ -107,7 +107,6 @@ body {
 /*mosquito canvas and start button*/
 /*Canvas:currentscore*/
 #scoreboard {
-    display: flex;
     font-family: 'Orbitron';
     font-size: 40px;
 }
@@ -141,23 +140,23 @@ body {
 	border: 3px solid black;
 }
 
-/*#gif:hover{
-	cursor: url(http://i.imgur.com/Ga9NJsZ.png), auto;
+/*#canvas-stage{
+	cursor: url(http://i.imgur.com/iwiAyD0.png), auto;
 };*/
 
 #start-button{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 	justify-content: center;
 	border: 1px;
 }
 
 #start-button button{
-	padding: 30px;
+	padding: 20px;
 	background-color: white;
 	font-family: 'bungee shade';
-    font-size: 30px;
+    font-size: 2em;
     color: red;
 	text-shadow: -4px 4px 2px #dbdbdb;
 	box-shadow: -10px 10px 5px #dbdbdb;
@@ -167,6 +166,7 @@ body {
 #start-button button:hover {
 	transform: translate(0px,-80px);
 	transform: scale(1.1);
+	opacity: 0.6;
 }
 
 #start-button button:active  {
@@ -178,11 +178,13 @@ body {
   	transition: background-color .5s linear;
 }
 
-#highscore-form {
+#form-id {
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	border: 1px solid black;
+	border-radius: 15px;
 }
 
 /*topscore*/
@@ -194,11 +196,12 @@ body {
     color: red;
     align-items: center;
     	height: 500;
-    	border: 1px solid #333;
+    	border-top: 1px solid black;
+    	border-bottom: 1px solid black;
 
 }
 #topscore-ul li {
- 	text-shadow: -2px -1px 1px grey;
+ 	text-shadow: 2px -1px 1px grey;
  		background: #dbdbdb;
     	-webkit-animation-name: move;
     	-webkit-animation-duration: 6s;
