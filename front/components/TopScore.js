@@ -16,12 +16,10 @@ const TopScore = React.createClass({
 		return(
 			<div id='topscore'>
 			<ul id='topscore-ul'>
-			{(this.state.topscore)?
-				this.state.topscore.map((a,idx)=>
-					<li key={idx}>
-					#{idx+1} {a.name} {a.score} points!
-					</li>):
-					<h1>Loading...</h1>}
+				{(this.state.topscore)?
+					this.state.topscore.map((a,idx)=>
+						<li key={idx}>#{idx+1} {a.name} {a.score} points!</li>):
+							<h1>Loading...</h1>}
 			</ul>
 			</div>
 		)

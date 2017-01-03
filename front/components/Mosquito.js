@@ -8,16 +8,14 @@ var Mosquito = React.createClass({
       };
     },
     handleClick() {
-      this.setState({
-        score: this.state.score+=1
+      this.setState({score: this.state.score+=1
       });
     },
     componentDidMount() {
       const image = new window.Image();
       image.src = 'http://i.imgur.com/NDjimYP.png';
       image.onload = () => {
-        this.setState({
-          image: image
+        this.setState({image: image
         })
       }
     },
@@ -28,7 +26,7 @@ var Mosquito = React.createClass({
               y={Math.floor(Math.random() * (500 - 1) + 1)} 
               width={60} 
               height={60}
-              shadowBlur={5}
+              shadowBlur={7}
               image={this.state.image}
               onClick={this.handleClick} />
         );
