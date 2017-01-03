@@ -48,14 +48,18 @@ const CanvasComponent = React.createClass({
             return <GameStart />
         }
     },
+    splat(){
+        ()=>{return <Splat />}
+    },
     render() {
         return (
-            <div id='canvas'>
+            <div id='canvas' >
             {
             (this.state.gameover!=true)?/*new game*/
                 (this.state.showgame!=false)? /*button pressed starts game*/
-                    <div id='canvas-stage'>
+                    <div id='canvas-stage' onClick={this.splat}>
                         <Buzz />
+                        <Splat />
                         <Stage width={1270} height={680}>
                             <Layer>
                                 <CanvasBg />

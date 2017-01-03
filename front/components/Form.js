@@ -13,7 +13,9 @@ const Form = React.createClass({
 		this.setState({data: data}))
 	},
 	handleChange(event) {
-		this.setState({input: event.target.value})
+		let name = event.target.value
+		name = name.toUpperCase()
+		this.setState({input: name})
 	},
 	addTopScore() {
 		$.ajax({
@@ -29,13 +31,14 @@ const Form = React.createClass({
     		<div id='highscore-form'>
     		<h1>New High Score!</h1>
       		<form id='form' onSubmit={this.addTopScore}>
-			<input 	type='text' 
+			<input 	id='input-field'	
+					type='text' 
 					placeholder='Insert Name Here'
 					onChange={this.handleChange}
 					value={this.state.input}>
 			</input>
 			<br />
-			<input type="submit" value="Submit"></input>
+			<input id='submit-btn' type="submit" value="Submit"></input>
 			</form>
 			</div>
     	)
