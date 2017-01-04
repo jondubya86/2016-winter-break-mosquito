@@ -60,7 +60,7 @@ const CanvasComponent = React.createClass({
                     <div id='canvas-stage' onClick={this.splat}>
                         <Buzz />
                         <Splat />
-                        <Stage width={1270} height={680}>
+                        <Stage width={1255} height={800}>
                             <Layer>
                                 <CanvasBg />
                             </Layer>

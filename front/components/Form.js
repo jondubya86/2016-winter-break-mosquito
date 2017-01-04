@@ -13,7 +13,7 @@ const Form = React.createClass({
 		this.setState({data: data}))
 	},
 	handleChange(event) {
-		this.setState({input: name})
+		this.setState({input: event.target.value})
 	},
 	addTopScore() {
 		$.ajax({
