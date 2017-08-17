@@ -4,8 +4,8 @@
   "description": "mosquito-app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch & nodemon server.js"
+    "start": "psql zika-attack & nodemon ./backend/server.js",
+    "heroku-postbuild": "webpack"
   },
   "keywords": [
     "mosquito",
@@ -43,5 +43,8 @@
   "devDependencies": {
     "brfs": "^1.4.3",
     "transform-loader": "^0.2.3"
+  },
+    "engines": {
+    "node": "6.11.1"
   }
 }
