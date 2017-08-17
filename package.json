@@ -4,8 +4,8 @@
   "description": "mosquito-app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch & nodemon server.js"
+    "start": "nodemon server.js",
+    "heroku-postbuild": "webpack"
   },
   "keywords": [
     "mosquito",
