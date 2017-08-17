@@ -4,7 +4,7 @@
   "description": "mosquito-app",
   "main": "index.js",
   "scripts": {
-    "start": "npm server.js",
+    "start": "nodemon server.js",
     "heroku-postbuild": "webpack"
   },
   "keywords": [
@@ -43,5 +43,8 @@
   "devDependencies": {
     "brfs": "^1.4.3",
     "transform-loader": "^0.2.3"
+  },
+  "engines": {
+    "node": "6.11.1"
   }
 }
