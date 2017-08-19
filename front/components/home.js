@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Home = React.createClass({
-	render(){
-		return(
-			<div id='home'>
+function Home(){
+	return(
+		<div id='home'>
 				<div id='home-title'>
 					<img id='logo' src='http://i.imgur.com/NkPAl5R.png'></img>
 					<span><h1>Zika Attack!</h1></span>
@@ -15,7 +14,6 @@ const Home = React.createClass({
 				</div>
 			</div>
 		)
-	}
-});
+	};
 
 module.exports = Home;
