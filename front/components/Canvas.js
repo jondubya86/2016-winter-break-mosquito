@@ -41,7 +41,7 @@ const CanvasComponent = React.createClass({
         for(x in topTen){
             scores.push(topTen[x].score)
         }
-        if(this.state.score>scores[scores.length-1]){
+        if(this.state.score > scores[scores.length-1]){
             this.setState({buttonshow:false})
             return <div id='form-id'><Form score={this.state.score} /></div>
         }else{
@@ -76,9 +76,9 @@ const CanvasComponent = React.createClass({
             {/*new game loads and shows button, if pressed shows current score while game is playing*/
             (this.state.buttonshow===true)?
             <div id='start-button'>
-            <button onClick={this.startGame}>Start Game</button> 
+                <button onClick={this.startGame}>Start Game</button> 
             </div>:
-            <div id='scoreboard'>
+                <div id='scoreboard'>
             <p>Kill Count: {this.state.score}</p>
             </div>}
             </div>
