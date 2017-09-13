@@ -8,7 +8,7 @@ const getAllHighscore=(req,res)=>{
     	],
     	limit: 10
   }).then((data)=>{
-	console.log('Worked!')
+    console.log('Worked!')
     res.send(data)
   })
 };

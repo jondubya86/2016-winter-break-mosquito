@@ -16,7 +16,9 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'))
 });
 
-db.sequelize.sync().then(()=>
-		app.listen(3890,() => {console.log('listening to port 3890')}
-		)
-	);
+db.sequelize.sync().then(()=> {
+  let port = process.env.PORT || 3890;
+  app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+  });
+});
