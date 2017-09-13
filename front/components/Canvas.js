@@ -3,15 +3,15 @@ import {Layer, Rect, Stage, Group} from 'react-konva';
 import $ from 'jquery';
 
 //components
-import Mosquito from './Mosquito';
-import GameStart from './GameStart';
-import Form from './Form';
-import TopScore from './TopScore';
-import CanvasBg from './CanvasBg';
+import Mosquito from './mosquito.js';
+import GameStart from './gamestart.js';
+import Form from './form.js';
+import TopScore from './topscore.js';
+import CanvasBg from './canvasbg.js';
 
 //sound effects
-import Buzz from './Buzz';
-import Splat from './Splat';
+import Buzz from './buzz.js';
+import Splat from './splat.js';
 
 const CanvasComponent = React.createClass({
     getInitialState() {

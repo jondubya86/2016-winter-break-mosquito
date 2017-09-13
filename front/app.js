@@ -4,11 +4,11 @@ import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
 import './components/styles.css';
 
 //components
-import NavBar from './components/NavBar';
+import NavBar from './components/navbar.js';
 import Home from './components/home.js';
-import CanvasComponent from './components/Canvas';
-import TopScore from './components/TopScore';
-import About from './components/About';
+import CanvasComponent from './components/canvas.js';
+import TopScore from './components/topscore.js';
+import About from './components/about.js';
 
 const App = React.createClass({
 	render(){
