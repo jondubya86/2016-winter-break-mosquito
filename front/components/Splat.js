@@ -13,4 +13,4 @@ const Splat = React.createClass({
 	}
 });
 
-module.exports = Splat;
+export default Splat;

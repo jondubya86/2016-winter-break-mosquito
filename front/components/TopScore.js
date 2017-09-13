@@ -26,4 +26,4 @@ const TopScore = React.createClass({
 	}
 });
 
-module.exports = TopScore;
+export default TopScore;

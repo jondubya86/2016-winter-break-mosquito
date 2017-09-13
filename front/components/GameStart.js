@@ -13,4 +13,4 @@ function GameStart() {
     );
 }
 
-module.exports = GameStart;
+export default GameStart;

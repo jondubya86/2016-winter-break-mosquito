@@ -18,4 +18,4 @@ const About = React.createClass({
 	}
 });
 
-module.exports = About;
+export default About;

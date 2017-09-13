@@ -33,4 +33,4 @@ var Mosquito = React.createClass({
     }
 })
 
-module.exports = Mosquito;
+export default Mosquito;

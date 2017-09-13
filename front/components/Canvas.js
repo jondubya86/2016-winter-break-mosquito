@@ -86,4 +86,4 @@ const CanvasComponent = React.createClass({
     }
 });
 
-module.exports = CanvasComponent;
+export default CanvasComponent;

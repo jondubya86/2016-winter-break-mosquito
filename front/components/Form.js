@@ -43,4 +43,4 @@ const Form = React.createClass({
     }
 });
 
-module.exports = Form;
+export default Form;

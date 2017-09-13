@@ -16,4 +16,4 @@ const NavBar = React.createClass({
 	}
 });
 
-module.exports = NavBar;
+export default NavBar;

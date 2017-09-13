@@ -13,4 +13,4 @@ const Buzz = React.createClass({
 	}
 });
 
-module.exports = Buzz;
+export default Buzz;

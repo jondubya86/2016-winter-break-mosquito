@@ -27,4 +27,4 @@ var CanvasBg = React.createClass({
     }
 })
 
-module.exports = CanvasBg;
+export default CanvasBg;
