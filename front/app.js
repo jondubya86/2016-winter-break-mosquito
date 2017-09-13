@@ -5,7 +5,7 @@ import './components/styles.css';
 
 //components
 import NavBar from './components/NavBar';
-import Home from './components/Home.js';
+import Home from './components/home.js';
 import CanvasComponent from './components/Canvas';
 import TopScore from './components/TopScore';
 import About from './components/About';
