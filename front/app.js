@@ -4,7 +4,7 @@ import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
 import './components/styles.css';
 
 //components
-import NavBar from './components/navbar.js';
+import NavBar from './components/navbar.jsx';
 import Home from './components/home.js';
 import CanvasComponent from './components/canvas.js';
 import TopScore from './components/topscore.js';
