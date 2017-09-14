@@ -1,8 +1,6 @@
 import React from 'react';
 
-const About = React.createClass({
-	render(){
-		return(
+const About = () => 
 			<div id='about'>
 				<div id='about-title'>
 					<h1>About Page</h1>
@@ -14,8 +12,5 @@ const About = React.createClass({
 					<p>Keep calm and swat on!</p>
 				</div>
 			</div>
-		)
-	}
-});
 
 export default About;

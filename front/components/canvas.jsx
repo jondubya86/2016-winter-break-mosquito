@@ -6,7 +6,7 @@ import $ from 'jquery';
 import Mosquito from './mosquito.js';
 import GameStart from './gamestart.js';
 import Form from './form.js';
-import TopScore from './topscore.js';
+import TopScore from './topscore.jsx';
 import CanvasBg from './canvasbg.js';
 
 //sound effects

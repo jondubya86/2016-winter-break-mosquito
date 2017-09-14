@@ -6,9 +6,10 @@ import './components/styles.css';
 //components
 import NavBar from './components/navbar.jsx';
 import Home from './components/home.js';
-import CanvasComponent from './components/canvas.js';
-import TopScore from './components/topscore.js';
+import CanvasComponent from './components/canvas.jsx';
+import TopScore from './components/topscore.jsx';
 import About from './components/about.js';
+
 
 const App = React.createClass({
 	render(){
