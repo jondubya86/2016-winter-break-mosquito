@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "psql zika-attack & nodemon ./server.js",
-    "build:client": "webpack",
-    "build:server": "webpack --config webpack.server.config.js",
     "heroku-postbuild": "webpack"
   },
   "keywords": [
