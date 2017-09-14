@@ -4,8 +4,8 @@
   "description": "mosquito-app",
   "main": "index.js",
   "scripts": {
-    "start": "psql zika-attack & nodemon ./server.js",
-    "heroku-postbuild": "webpack -w & webpack --display-error-details"
+    "start": "psql zika-attack & nodemon ./server.js & webpack --display-error-details",
+    "heroku-postbuild": "webpack"
   },
   "keywords": [
     "mosquito",
