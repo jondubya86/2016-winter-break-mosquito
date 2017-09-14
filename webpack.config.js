@@ -1,8 +1,9 @@
+let path = require('path');
+
 module.exports = {
-  context: __dirname,
   entry: "./front/app.js",
   output: {
-    path: "./bundle",
+    path: path.resolve(__dirname, 'client/dist'),
     filename: "bundle.js"
   },
   module: {
